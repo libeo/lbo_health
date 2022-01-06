@@ -1,0 +1,25 @@
+{
+  "name": "libeo/lbo_health",
+  "type": "typo3-cms-extension",
+  "description": "Add a route to check if all services are up",
+  "license": "AGPL-3.0",
+  "authors": [
+    {
+      "name": "Pierre Boivin",
+      "email": "pierre.boivin@libeo.com"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^10.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Libeo\\LboHealth\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "lbo_health"
+    }
+  }
+}

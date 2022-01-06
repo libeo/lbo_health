@@ -1,0 +1,32 @@
+plugin.tx_lbohealth {
+    settings {
+        checks {
+            mysql = 1
+            redis = 1
+            solr = 1
+        }
+    }
+}
+
+pageHealthStatus = PAGE
+pageHealthStatus {
+    typeNum = 1607616696
+
+	config {
+		disableAllHeaderCode = 1
+		additionalHeaders = application/json
+		xhtml_cleaning = 0
+		admPanel = 0
+		debug = 0
+	}
+
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = LboHealth
+        pluginName = Health
+        controller = Health
+        action = status
+        vendorName = Libeo
+    }
+}
